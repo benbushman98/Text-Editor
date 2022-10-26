@@ -13,17 +13,17 @@ const initdb = async () =>
   });
 
 // TODO: Add logic to a method that accepts some content and adds it to the database
-export const putDb = async (content) => {
+export const putDb = async (id, content) => {
   try {
     console.log('PUT to the database');
-    const textDB = await openDB('text', 1);
-    const tx = textDB.transaction('text', 'readwrite');
-    const store = tx.objectStore('text');
-    const request = store.put({ id: id, todo: content });
+    const textDB = await openDB('jate', 1);
+    const text = textDB.transaction('jate', 'readwrite');
+    const store = text.objectStore('jate');
+    const request = store.put({ id: id, content: content });
     const result = await request;
     console.log('🚀 - data saved to the database', result);
   } catch {
-    console.error('putDb not implemented');
+    console.err('putDb not implemented');
   }
 }
 
@@ -31,9 +31,9 @@ export const putDb = async (content) => {
 export const getDb = async () => {
   try {
     console.log('GET all from the database');
-    const textDB = await openDB('text', 1);
-    const tx = textDB.transaction('text', 'readonly');
-    const store = tx.objectStore('text');
+    const textDB = await openDB('jate', 1);
+    const text = textDB.transaction('jate', 'readonly');
+    const store = text.objectStore('jate');
     const request = store.getAll();
     const result = await request;
     console.log('result.value', result);
