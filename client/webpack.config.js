@@ -30,7 +30,7 @@ module.exports = () => {
       new WebpackPwaManifest({
         name: 'Text Editor',
         publicPath: './',
-        start_url: './',
+        start_url: '/',
         short_name: 'TextEditor',
         description: 'A useful TextEditor',
         background_color: '#ffffff',

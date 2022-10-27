@@ -35,7 +35,7 @@
   "short_name": "TextEditor",
   "orientation": "portrait",
   "display": "standalone",
-  "start_url": "./",
+  "start_url": "/",
   "description": "A useful TextEditor",
   "background_color": "#ffffff"
 }
