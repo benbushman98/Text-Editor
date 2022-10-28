@@ -3,6 +3,12 @@ import Editor from './editor';
 import './database';
 import '../css/style.css';
 
+import logo from '../images/logo.png';
+document.getElementById('logo').src = logo;
+
+import favicon from '../../favicon.png';
+document.getElementById('favicon').href = favicon;
+
 const main = document.querySelector('#main');
 main.innerHTML = '';
 
