@@ -13,7 +13,7 @@ This project was created to demonstrate my ability to use the MVC model. Using t
 
 ## Screenshot
 ![Photos of J.A.T.E](server/assets/img/J.A.T.E.png)
-![Photos of J.A.T.E](server/assets/img/edited J.A.T.E.png)
+![Photos of J.A.T.E](server/assets/img/editedJ.A.T.E.png)
 
 ## Deployed Application
 https://boiling-mesa-85788.herokuapp.com/
