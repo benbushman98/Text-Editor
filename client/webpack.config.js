@@ -17,14 +17,17 @@ module.exports = () => {
     },
     // Added and configured workbox plugins for a service worker and manifest file.
     plugins: [
+      // Configuration for HTML Webpack Plugin.
       new HtmlWebpackPlugin({
         template: './index.html',
         title: 'Webpack Plugin',
       }),
+      // Configuration for InjectManifest Plugin
       new InjectManifest({
         swSrc: './src-sw.js',
         swDest: './src-sw.js',
       }),
+      // Configuration for WebpackPwaManifest Plugin
       new WebpackPwaManifest({
         name: 'Just Another Text Editor',
         publicPath: './',
@@ -54,6 +57,7 @@ module.exports = () => {
           test: /\.(png|svg|jpg|jpeg|gif)$/i,
           type: 'asset/resource',
         },
+        // Babel Loader to convert new flavors of JS to older JS for older versions of browser.
         {
           test: /\.m?js$/,
           exclude: /(node_modules|bower_components)/,

@@ -13,7 +13,7 @@ const initdb = async () =>
     },
   });
 
-// Logic to a method that accepts some content and adds it to the database
+// Logic to a method that accepts some content and adds it to the database. Got help from instructor Jonathan Bejarano.
 export const putDb = async (content) => {
   try {
     console.log('PUT to the database');
@@ -28,7 +28,7 @@ export const putDb = async (content) => {
   }
 }
 
-// Logic for a method that gets all the content from the database
+// Logic for a method that gets all the content from the database. Got help from instructor Jonathan Bejarano.
 export const getDb = async () => {
   try {
     console.log('GET all from the database');
